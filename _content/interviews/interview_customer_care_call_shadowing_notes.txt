@@ -1,0 +1,11 @@
+Customer Care Call Shadowing Notes - Unedited
+
+These notes came from shadowing live calls and post-call debriefs with the escalation desk. It's messy on purpose because this is how it sounded in real time.
+
+Call 1 was about a warranty claim that had already been "approved" in one system but still showed "awaiting documents" in another. Customer had called three times, each rep gave a different status. Dealer advisor jumped in and said they uploaded photos twice, then found out the file naming convention changed last month and old uploads were silently ignored. Nobody told frontline teams. Customer wasn't even angry at first, mostly confused, then escalated when they heard "can you resubmit everything" for the third time.
+
+Call 2 drifted from a brake issue into a software update complaint because the owner couldn't tell whether the vehicle was safe to drive while waiting for parts. Rep had to open four tools and still couldn't provide a confident timeline. Supervisor whispered, "this is where we lose trust," and you could feel it happen in real time. Customer asked a very basic question: "who owns this now?" and there wasn't a single clear answer.
+
+After the calls, agents said they don't mind hard conversations, they mind ambiguity. If they can say "here are your next two steps and your next update date," most customers calm down. Right now, they improvise because statuses are not normalized across claims, parts, and service scheduling. One agent said she keeps a personal notebook of workaround phrases because official scripts don't match reality.
+
+Big takeaway from the debrief: customers interpret silence as neglect, even when teams are working behind the scenes. If we can't shorten cycle time immediately, we should at least improve status transparency and ownership handoff language so people are not bounced between dealer, support, and engineering with no accountable endpoint.

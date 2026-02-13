@@ -1,0 +1,22 @@
+Dealer Roundtable - Raw Transcript Excerpt
+
+Moderator: Let's start simple, where are you losing the most time?
+Dealer Principal 1: Honestly? Chasing answers. Not fixing cars, chasing answers. Service advisors open tickets, then wait. Customers think we're stalling, but we're waiting on approvals or parts ETAs that move every day.
+Dealer Principal 2: And incentives. We announce a campaign, the portal updates late, then sales teams quote one number and finance sees another. By the time we reconcile it, social media has screenshots and now we're defending credibility.
+Moderator: If you could change one thing this quarter?
+Service Director: One source of truth for claim status. I don't care if the backend is five systems, but the front should act like one system.
+Dealer Ops Lead: Plus alerting that is human-readable. Not "error code 7612." Tell me "photo missing for claim line item 3" so my team can fix it in 30 seconds.
+
+[side conversation, partially captured]
+Dealer Principal 3: We also need better weekend escalation. Friday afternoon issues basically vanish until Monday unless someone has a personal contact.
+Service Director: Exactly. Then Monday we get a wall of aged tickets and everyone is already defensive.
+Dealer Principal 1: Customers do not care which team owns which queue. They just see delay.
+
+Moderator: How do you feel about current digital roadmap priorities?
+Dealer Ops Lead: Mixed. Some improvements are nice but cosmetic. We keep adding interface polish while core status plumbing is still brittle.
+Dealer Principal 2: I loved the faster search last release, that helped, but if approvals still bounce back for undocumented reasons then we just find bad news faster.
+Service Director: That's the phrase of the day: "faster bad news."
+
+Moderator: Last question, what would make you feel heard?
+Dealer Principal 3: Publish a monthly "you said / we changed" note. Doesn't have to be perfect, just show that feedback turns into backlog decisions.
+Dealer Principal 1: And don't wait for annual conferences. Half these fixes are workflow details we can validate in a 20-minute pilot.

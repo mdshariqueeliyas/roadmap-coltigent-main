@@ -1,0 +1,9 @@
+Joint Interview - Operations + Supply Chain
+
+Operations Lead:
+- Press-line stoppages are still our biggest hidden cost.
+- Maintenance teams need earlier warning, not just post-failure reports.
+
+Supply Chain Lead:
+- Single-source battery contracts are now a board-level risk.
+- We need formal risk triggers and backup suppliers before Q4.

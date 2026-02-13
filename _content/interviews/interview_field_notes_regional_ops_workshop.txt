@@ -1,0 +1,11 @@
+Regional Ops Workshop - Field Notes (raw capture)
+
+Okay this is not a formal interview transcript, this is mostly my running notes from the Thursday workshop and hallway conversations afterward. We were supposed to keep this to 45 minutes and it went almost two hours because everyone had examples. A lot of the frustration is not one giant failure, it is hundreds of small handoff misses that stack up, especially around parts visibility and weekend staffing.
+
+Plant A team said the dashboard says a line is "green" while supervisors are manually slowing throughput because one supplier shipment arrived with mixed serial formatting and the scanners rejected half the pallet. IT says "that's a master-data issue," procurement says "supplier non-compliance," floor leads say "none of that helps me at 2:00 a.m." We probably need one incident view that links quality events, supplier source, and downtime minutes, otherwise every team tells a true but partial story.
+
+People kept circling back to this: we start too many pilots, then lose steam after the first 30 days. The maintenance AI pilot is a good example. Week 1 looked incredible, alerts everywhere, everyone excited. Week 4 nobody trusted the alerts because there were too many low-confidence triggers and no clear rule for when to stop the line versus watch-and-wait. So now mechanics are using their own judgment again, which is not bad by itself, but it means we didn't operationalize the tool.
+
+Another point that came up repeatedly: planning assumptions are outdated as soon as model mix shifts. We planned around one EV/ICE ratio and then incentives changed and dealer demand shifted in six weeks. This blows up battery staging, labor plans, and service part forecasts in different directions. Teams asked for scenario planning but not in a "fancy strategy" way, literally "if mix changes by 8% what moves first and who gets paged."
+
+Also heard concerns that we over-index on corporate slides while under-investing in shift-level usability. One supervisor said, "I don't need another heatmap. I need to know what to do in the next 20 minutes." That's probably the clearest design requirement we got all day.

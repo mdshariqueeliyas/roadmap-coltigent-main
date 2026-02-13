@@ -1,0 +1,236 @@
+{
+  "builtAt": "2026-02-13T14:46:30.800Z",
+  "config": {
+    "tenant_id": "auto_nova_motors",
+    "meta": {
+      "title": "AutoNova Strategic Roadmap",
+      "logo_url": "/assets/logo.svg",
+      "favicon_url": "/assets/favicon.ico"
+    },
+    "design_tokens": {
+      "colors": {
+        "primary": "#0B1220",
+        "secondary": "#2563EB",
+        "accent": "#F59E0B",
+        "background": "#F8FAFC"
+      },
+      "typography": {
+        "heading_font": "Inter",
+        "body_font": "Roboto"
+      }
+    },
+    "modules": {
+      "enable_matrix": true,
+      "enable_gantt": true,
+      "enable_blog": true
+    },
+    "governance": {
+      "fiscal_year_start": "2026-01-01",
+      "max_concurrent_projects": 5,
+      "phases": [
+        "Foundation",
+        "Acceleration",
+        "Scale"
+      ]
+    },
+    "taxonomies": {
+      "departments": [
+        "Manufacturing",
+        "Supply Chain",
+        "Sales",
+        "After-Sales"
+      ],
+      "statuses": [
+        "Backlog",
+        "Queued",
+        "Active",
+        "Paused",
+        "Complete"
+      ]
+    }
+  },
+  "projects": [
+    {
+      "id": "PRJ-001",
+      "title": "Factory Predictive Maintenance Rollout",
+      "slug": "factory-predictive-maintenance-rollout",
+      "owner": "VP Manufacturing",
+      "department": "Manufacturing",
+      "phase": "Foundation",
+      "status": "Active",
+      "dates": {
+        "planned_start": "2026-02-01",
+        "planned_end": "2026-07-15",
+        "actual_start": "2026-02-10"
+      },
+      "scores": {
+        "strategic_value": 8.6,
+        "complexity": 3.2,
+        "confidence": 0.87
+      },
+      "financials": {
+        "estimated_cost": 620000,
+        "projected_roi": 2100000,
+        "currency": "USD"
+      },
+      "tags": [
+        "IoT",
+        "Maintenance",
+        "Uptime"
+      ],
+      "related_projects": [
+        "PRJ-002",
+        "PRJ-004"
+      ],
+      "body": "# Executive Summary\nDeploy sensor-driven predictive maintenance across two flagship assembly plants to cut unplanned downtime and improve throughput reliability.\n\n## Deliverables\n- [ ] Install sensor kits on critical presses and paint lines\n- [ ] Build fault-risk dashboard for plant supervisors\n- [ ] Train maintenance teams on predictive workflows\n",
+      "matrix": {
+        "impact_normalized": 86,
+        "effort_normalized": 32,
+        "quadrant": "Quick Wins"
+      }
+    },
+    {
+      "id": "PRJ-002",
+      "title": "Battery Supply Risk Hedging Program",
+      "slug": "battery-supply-risk-hedging-program",
+      "owner": "Chief Procurement Officer",
+      "department": "Supply Chain",
+      "phase": "Scale",
+      "status": "Queued",
+      "dates": {
+        "planned_start": "2026-05-01",
+        "planned_end": "2027-03-31",
+        "actual_start": "2026-05-05"
+      },
+      "scores": {
+        "strategic_value": 9.1,
+        "complexity": 8.2,
+        "confidence": 0.73
+      },
+      "financials": {
+        "estimated_cost": 3200000,
+        "projected_roi": 8600000,
+        "currency": "USD"
+      },
+      "tags": [
+        "Battery",
+        "Sourcing",
+        "Resilience"
+      ],
+      "related_projects": [
+        "PRJ-003"
+      ],
+      "body": "# Executive Summary\nDiversify battery cell sourcing and add contractual risk controls to protect EV launch timelines from commodity and geopolitical volatility.\n\n## Deliverables\n- [ ] Finalize dual-source supplier framework\n- [ ] Establish monthly risk heatmap with scenario triggers\n- [ ] Negotiate indexed pricing guardrails\n",
+      "matrix": {
+        "impact_normalized": 91,
+        "effort_normalized": 82,
+        "quadrant": "Big Bets"
+      }
+    },
+    {
+      "id": "PRJ-003",
+      "title": "Dealer Portal UX Refresh",
+      "slug": "dealer-portal-ux-refresh",
+      "owner": "Director of Sales Operations",
+      "department": "Sales",
+      "phase": "Acceleration",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-06-15",
+        "planned_end": "2026-09-30",
+        "actual_start": "2026-06-20"
+      },
+      "scores": {
+        "strategic_value": 3.9,
+        "complexity": 2.8,
+        "confidence": 0.9
+      },
+      "financials": {
+        "estimated_cost": 280000,
+        "projected_roi": 410000,
+        "currency": "USD"
+      },
+      "tags": [
+        "Dealer",
+        "UX",
+        "CRM"
+      ],
+      "related_projects": [],
+      "body": "# Executive Summary\nModernize dealer workflows for inventory lookup and incentive visibility with minimal architectural changes.\n\n## Deliverables\n- [ ] Consolidate key workflows into a single dashboard\n- [ ] Reduce lead capture steps from five to three\n- [ ] Add context-aware help prompts\n",
+      "matrix": {
+        "impact_normalized": 39,
+        "effort_normalized": 28,
+        "quadrant": "Fillers"
+      }
+    },
+    {
+      "id": "PRJ-004",
+      "title": "Legacy Warranty Mainframe Rewrite",
+      "slug": "legacy-warranty-mainframe-rewrite",
+      "owner": "Head of After-Sales Platforms",
+      "department": "After-Sales",
+      "phase": "Foundation",
+      "status": "Queued",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2027-12-31",
+        "actual_start": "2026-04-15"
+      },
+      "scores": {
+        "strategic_value": 4.1,
+        "complexity": 8.7,
+        "confidence": 0.66
+      },
+      "financials": {
+        "estimated_cost": 5400000,
+        "projected_roi": 1900000,
+        "currency": "USD"
+      },
+      "tags": [
+        "Mainframe",
+        "Warranty",
+        "Modernization"
+      ],
+      "related_projects": [
+        "PRJ-001"
+      ],
+      "body": "# Executive Summary\nReplace the legacy warranty claims mainframe with a service-oriented platform to reduce long-term technical debt and support future automation.\n\n## Deliverables\n- [ ] Define target-state domain model and APIs\n- [ ] Migrate historical claims data in staged waves\n- [ ] Parallel-run old and new platforms for one quarter\n",
+      "matrix": {
+        "impact_normalized": 41,
+        "effort_normalized": 87,
+        "quadrant": "Time Sinks"
+      }
+    }
+  ],
+  "updates": [
+    {
+      "id": "UPD-2026-12",
+      "date": "2026-03-12",
+      "author": "Program Management Office",
+      "type": "Weekly",
+      "highlight_projects": [
+        "PRJ-001",
+        "PRJ-003"
+      ],
+      "sentiment": "On Track",
+      "body": "# Weekly Rollup\n\nKey achievements this week include progress on the Factory Predictive Maintenance rollout and alignment on the Dealer Portal UX refresh scope.\n\n## Highlights\n\n- **PRJ-001**: Sensor installation 40% complete at Plant A; dashboard prototype reviewed.\n- **PRJ-003**: Consolidated workflow designs approved by Sales leadership.\n\n## Next Week\n\n- Begin pilot for predictive fault alerts.\n- Dealer Portal: start development sprint one.\n"
+    },
+    {
+      "id": "UPD-2026-11",
+      "date": "2026-03-05",
+      "author": "Program Management Office",
+      "type": "Weekly",
+      "highlight_projects": [
+        "PRJ-001",
+        "PRJ-002"
+      ],
+      "sentiment": "On Track",
+      "body": "# Weekly Rollup\n\nBattery supply hedging negotiations advanced; predictive maintenance pilot kicked off.\n\n## Highlights\n\n- **PRJ-002**: Dual-source framework draft shared with legal.\n- **PRJ-001**: First sensor batch installed; baseline data collection started.\n"
+    }
+  ],
+  "capacity": {
+    "activeCount": 1,
+    "maxConcurrent": 5,
+    "overCapacity": false
+  }
+}

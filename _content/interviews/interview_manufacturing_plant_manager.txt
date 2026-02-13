@@ -1,0 +1,6 @@
+Plant Manager Interview - Assembly Plant A
+
+- Unexpected stoppages during paint-line changeovers still cause cascading schedule misses.
+- We need better visibility into component failure risk before shift start.
+- Technician staffing is thin on weekend shifts, so alerts must be actionable and prioritized.
+- If we can cut downtime by even 10%, throughput targets become realistic.

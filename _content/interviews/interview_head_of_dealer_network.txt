@@ -1,0 +1,6 @@
+Head of Dealer Network Interview
+
+- Dealers want one place to see allocation forecasts, incentive updates, and recall notices.
+- Our current portal has too many clicks for routine tasks, especially service appointment escalations.
+- Faster warranty approvals would materially improve dealer satisfaction scores.
+- We should prioritize features that reduce call-center dependency.

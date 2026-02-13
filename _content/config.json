@@ -1,0 +1,34 @@
+{
+  "tenant_id": "auto_nova_motors",
+  "meta": {
+    "title": "AutoNova Strategic Roadmap",
+    "logo_url": "/assets/logo.svg",
+    "favicon_url": "/assets/favicon.ico"
+  },
+  "design_tokens": {
+    "colors": {
+      "primary": "#0B1220",
+      "secondary": "#2563EB",
+      "accent": "#F59E0B",
+      "background": "#F8FAFC"
+    },
+    "typography": {
+      "heading_font": "Inter",
+      "body_font": "Roboto"
+    }
+  },
+  "modules": {
+    "enable_matrix": true,
+    "enable_gantt": true,
+    "enable_blog": true
+  },
+  "governance": {
+    "fiscal_year_start": "2026-01-01",
+    "max_concurrent_projects": 5,
+    "phases": ["Foundation", "Acceleration", "Scale"]
+  },
+  "taxonomies": {
+    "departments": ["Manufacturing", "Supply Chain", "Sales", "After-Sales"],
+    "statuses": ["Backlog", "Queued", "Active", "Paused", "Complete"]
+  }
+}

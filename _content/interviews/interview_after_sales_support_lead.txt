@@ -1,0 +1,6 @@
+After-Sales Support Lead Interview
+
+- Warranty claim handoffs between dealers and central support are still too manual.
+- Customers are most frustrated by status opacity, not necessarily total resolution time.
+- We need consistent triage rules and clearer ownership for escalations.
+- A modern claims workflow should reduce rework and duplicate documentation requests.
