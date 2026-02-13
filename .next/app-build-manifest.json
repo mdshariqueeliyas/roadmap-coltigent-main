@@ -16,15 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/matrix/page.js"
     ],
+    "/projects/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/projects/page.js"
+    ],
     "/roadmap/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/roadmap/page.js"
     ],
-    "/projects/page": [
+    "/updates/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/projects/page.js"
+      "static/chunks/app/updates/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

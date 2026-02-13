@@ -3,7 +3,7 @@
 export function Skeleton({ className = '' }: { className?: string }) {
   return (
     <div
-      className={`animate-skeleton rounded bg-gray-200 dark:bg-gray-700 ${className}`}
+      className={`animate-skeleton rounded-xl bg-slate-200 ${className}`}
       aria-hidden
     />
   );
@@ -11,9 +11,9 @@ export function Skeleton({ className = '' }: { className?: string }) {
 
 export function MetricCardSkeleton() {
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-      <Skeleton className="mb-2 h-4 w-24" />
-      <Skeleton className="h-8 w-32" />
+    <div className="dashboard-card">
+      <Skeleton className="mb-3 h-4 w-28 rounded-lg" />
+      <Skeleton className="h-9 w-36 rounded-lg" />
     </div>
   );
 }

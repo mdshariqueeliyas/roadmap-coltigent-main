@@ -35,7 +35,7 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
         <Sidebar />
         <div className="flex min-w-0 flex-1 flex-col">
           <TopBar />
-          <main id="main-content" className="flex-1 p-4 md:p-6" tabIndex={-1}>
+          <main id="main-content" className="flex-1 bg-gradient-to-br from-slate-50/80 to-indigo-50/30 p-5 md:p-8" tabIndex={-1}>
             {children}
           </main>
         </div>
@@ -44,7 +44,7 @@ export function LayoutClient({ children }: { children: React.ReactNode }) {
       <button
         type="button"
         onClick={closeSidebar}
-        className="sidebar-overlay fixed inset-0 z-40 bg-black/50 lg:hidden"
+        className="sidebar-overlay fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm lg:hidden"
         aria-label="Close menu"
         tabIndex={sidebarOpen ? 0 : -1}
         style={{ display: sidebarOpen ? undefined : 'none' }}

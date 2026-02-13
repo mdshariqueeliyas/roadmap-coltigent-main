@@ -5,12 +5,12 @@ import Link from 'next/link';
 import type { Project } from '@/lib/types';
 
 const STATUS_COLORS: Record<string, string> = {
-  Active: 'bg-green-500',
-  Complete: 'bg-blue-500',
-  Queued: 'bg-amber-400',
-  Backlog: 'bg-gray-300',
-  Paused: 'bg-gray-400',
-  Overdue: 'bg-red-500',
+  Active: 'bg-emerald-500',
+  Complete: 'bg-indigo-500',
+  Queued: 'bg-amber-500',
+  Backlog: 'bg-slate-400',
+  Paused: 'bg-slate-500',
+  Overdue: 'bg-rose-500',
 };
 
 const MONTH_PX = 24;
@@ -63,10 +63,10 @@ export function RoadmapGantt({
     <div className="min-w-0">
       <div className="flex" style={{ width: leftLabelWidth + chartWidth }}>
         <div className="shrink-0 pr-2" style={{ width: leftLabelWidth }}>
-          <div className="h-8 text-xs font-medium text-gray-500">Group / Project</div>
+          <div className="h-8 text-xs font-semibold text-slate-600">Group / Project</div>
         </div>
         <div className="relative shrink-0 overflow-x-auto" style={{ width: chartWidth }}>
-          <div className="flex gap-0 text-xs font-medium text-gray-500">
+          <div className="flex gap-0 text-xs font-semibold text-slate-600">
             {monthLabels.map((m, i) => (
               <div
                 key={`${m}-${i}`}
@@ -80,7 +80,7 @@ export function RoadmapGantt({
         </div>
       </div>
       {groups.map(([groupName, groupProjects]) => (
-        <div key={groupName} className="border-t border-gray-100 first:border-t-0">
+        <div key={groupName} className="border-t border-slate-200 first:border-t-0">
           <div
             className="flex items-stretch font-medium text-primary"
             style={{ minHeight: ROW_HEIGHT }}
@@ -97,7 +97,7 @@ export function RoadmapGantt({
             >
               {todayX >= 0 && (
                 <div
-                  className="absolute top-0 bottom-0 w-0.5 bg-red-500 z-10"
+                  className="absolute top-0 bottom-0 w-0.5 bg-rose-500 z-10"
                   style={{ left: todayX }}
                   title="Today"
                 />
@@ -127,13 +127,13 @@ export function RoadmapGantt({
                   >
                     <Link
                       href={`/projects/${p.slug}/`}
-                      className={`flex h-full flex-1 items-center rounded px-1 text-xs font-medium text-white ${color} hover:opacity-90`}
+                      className={`flex h-full flex-1 items-center rounded-lg px-2 text-xs font-semibold text-white shadow-sm ${color} hover:opacity-95 transition-opacity`}
                       title={`${p.title} (${p.dates.planned_start} – ${p.dates.planned_end})`}
                     >
                       <span className="truncate">{p.title}</span>
                     </Link>
                     <span
-                      className="ml-0.5 text-red-600"
+                      className="ml-0.5 text-rose-500"
                       title="Milestone"
                       aria-hidden
                     >
