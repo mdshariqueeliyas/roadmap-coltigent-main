@@ -1,0 +1,6 @@
+Procurement & Sourcing Lead Interview
+
+- We still don't have a single view of supplier risk across critical components; each plant and program team maintains their own spreadsheets.
+- Dual-sourcing for high-impact parts should be mandatory before EV volume ramp, but we lack the data to prioritize which parts first.
+- Late delivery alerts from suppliers rarely reach production planning in time to adjust sequencing.
+- A supplier performance and risk dashboard would help us rebalance allocation and avoid last-minute expedites.
