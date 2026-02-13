@@ -1,0 +1,6 @@
+Quality & Compliance Lead Interview
+
+- Recall traceability is still fragmented across plant systems and dealer records; regulators expect a single source of truth.
+- We need audit-ready documentation for warranty decisions without slowing down claim processing.
+- Supplier quality data rarely flows back into our defect dashboards in time to prevent batch issues.
+- A unified quality event log would reduce rework in investigations and speed up root-cause closure.
