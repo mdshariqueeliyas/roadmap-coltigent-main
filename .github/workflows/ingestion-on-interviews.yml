@@ -16,6 +16,7 @@ env:
 jobs:
   ingest:
     runs-on: ubuntu-latest
+    environment: jack
     permissions:
       contents: write
       pull-requests: write
