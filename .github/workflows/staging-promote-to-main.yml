@@ -1,0 +1,79 @@
+# Move changes from staging branch to main: run staging:promote (staging → projects + master_data.json)
+# and open a PR from staging to main.
+
+name: Promote Staging to Main
+
+on:
+  push:
+    branches: [staging]
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout staging branch
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Promote staging to projects and regenerate master_data.json
+        run: npm run staging:promote
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            git status
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "No changes after promote (nothing was in _staging)."
+          fi
+
+      - name: Commit and push to staging
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _content/projects/ public/master_data.json
+          git add -u _content/_staging/
+          git status
+          git commit -m "chore(staging): promote drafts to projects and update master_data.json"
+          git push origin staging
+
+      - name: Create or update PR from staging to main
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh pr list --base main --head staging --json number -q '.[0].number' 2>/dev/null || true)
+          if [ -n "$EXISTING" ]; then
+            echo "PR #$EXISTING (staging → main) already exists."
+          else
+            gh pr create \
+              --base main \
+              --head staging \
+              --title "Promote staging to main" \
+              --body "Promoted \`_content/_staging\` to \`_content/projects\` and regenerated \`public/master_data.json\` via \`npm run staging:promote\`. Review and merge to update main."
+            echo "PR created: staging → main"
+          fi

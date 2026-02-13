@@ -1,0 +1,85 @@
+# When new files are added to _content/interviews, run the AI Ingestion pipeline
+# and open a PR to merge generated _content/_staging drafts into the staging branch.
+
+name: AI Ingestion (Interviews → Staging)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_content/interviews/**'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run AI Ingestion pipeline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          INGESTION_MODEL: ${{ vars.INGESTION_MODEL || 'gpt-4o-mini' }}
+        run: npm run ingestion
+        continue-on-error: true
+
+      - name: Check for new staging files
+        id: staging
+        run: |
+          if [ -d '_content/_staging' ] && [ -n "$(ls -A _content/_staging 2>/dev/null)" ]; then
+            echo "has_staging=true" >> "$GITHUB_OUTPUT"
+            echo "Staging files:"
+            ls -la _content/_staging
+          else
+            echo "has_staging=false" >> "$GITHUB_OUTPUT"
+            echo "No staging files generated."
+          fi
+
+      - name: Create branch and PR to staging
+        if: steps.staging.outputs.has_staging == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="ingestion/staging-$(date +%Y%m%d-%H%M%S)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git checkout -b "$BRANCH"
+          git add _content/_staging/
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore(ingestion): add AI-generated drafts to _content/_staging"
+          git push origin "$BRANCH"
+
+          # Ensure staging branch exists (fetch or create from main)
+          git fetch origin staging 2>/dev/null || true
+          gh pr create \
+            --base staging \
+            --head "$BRANCH" \
+            --title "Ingestion: merge staging drafts from AI pipeline" \
+            --body "Generated from \`npm run ingestion\` after new files in \`_content/interviews/\`. Review and merge into \`staging\`."
+          echo "PR created for $BRANCH -> staging"
+        continue-on-error: true

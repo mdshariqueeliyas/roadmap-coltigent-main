@@ -10,6 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 import matter from 'gray-matter';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -59,6 +60,10 @@ function promoteStagingToProjects() {
   }
 
   console.log(`Done. ${mdFiles.length} file(s) moved to _content/projects/`);
+
+  // Regenerate master_data.json so the UI shows the new projects
+  console.log('Running governance to update master_data.json...');
+  execSync('node scripts/governance/index.mjs', { cwd: ROOT, stdio: 'inherit' });
 }
 
 promoteStagingToProjects();
