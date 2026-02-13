@@ -46,7 +46,10 @@ You are not expected to finish everything. Choose the areas where you can make t
 * src/app: The Next.js App Router structure (pages are currently empty placeholders).  
 * src/lib: Where your logic/utils should go.  
 * \_content/projects: Seeded with starter synthetic project files for the matrix exercise.  
+* scripts: **Logic layer** — Governance Engine (`scripts/governance`), **Ingestion Engine** (`scripts/ingestion`), and cron jobs (`scripts/cron`).  
 * Roadmap Engine PRD.md: The source of truth for logic and design.
+
+The **Ingestion Engine** (AI pipeline) reads `_content/interviews/`, normalizes text (txt/md/pdf/docx), runs LLM entity extraction and heuristic Impact/Effort scoring, and writes draft project Markdown to `_content/_staging/`. See `scripts/ingestion/README.md` for usage and `OPENAI_API_KEY` setup.
 
 ## **3.1 Starter Dataset (AutoNova Motors Synthetic Content)**
 

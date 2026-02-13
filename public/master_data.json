@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-02-13T14:47:49.768Z",
+  "builtAt": "2026-02-13T15:52:49.798Z",
   "config": {
     "tenant_id": "auto_nova_motors",
     "meta": {
@@ -199,6 +199,192 @@
         "impact_normalized": 41,
         "effort_normalized": 87,
         "quadrant": "Time Sinks"
+      }
+    },
+    {
+      "id": "PRJ-005",
+      "title": "Enhanced Warranty Turnaround Visibility",
+      "slug": "enhanced-warranty-turnaround-visibility",
+      "owner": "VP After-Sales",
+      "department": "After-Sales",
+      "phase": "Foundation",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2026-09-30"
+      },
+      "scores": {
+        "strategic_value": 9,
+        "complexity": 5,
+        "confidence": 1
+      },
+      "financials": {
+        "estimated_cost": 0,
+        "projected_roi": 0,
+        "currency": "USD"
+      },
+      "tags": [],
+      "related_projects": [],
+      "body": "\n# Executive Summary\nImproving warranty turnaround visibility is essential for both customers and dealers, especially in light of the unpredictable supply chain. This initiative will help manage expectations and enhance the overall customer experience, which is vital for brand reputation.\n\n## Deliverables\n- [ ] Create a real-time warranty status dashboard\n- [ ] Integrate dealer and customer-facing interfaces\n- [ ] Establish regular updates for stakeholders\n- [ ] Develop a communication plan for transparency\n",
+      "matrix": {
+        "impact_normalized": 90,
+        "effort_normalized": 50,
+        "quadrant": "Big Bets"
+      }
+    },
+    {
+      "id": "PRJ-006",
+      "title": "One Source of Truth for Claim Status",
+      "slug": "one-source-of-truth-for-claim-status",
+      "owner": "Head of Dealer Network",
+      "department": "After-Sales",
+      "phase": "Foundation",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2026-09-30"
+      },
+      "scores": {
+        "strategic_value": 8,
+        "complexity": 7,
+        "confidence": 1
+      },
+      "financials": {
+        "estimated_cost": 0,
+        "projected_roi": 0,
+        "currency": "USD"
+      },
+      "tags": [],
+      "related_projects": [],
+      "body": "\n# Executive Summary\nDealers are losing valuable time chasing answers due to fragmented systems. Creating a unified interface for claim status will streamline operations, reduce confusion, and improve dealer satisfaction, which is crucial for maintaining strong dealer relationships.\n\n## Deliverables\n- [ ] Design a centralized claims status portal\n- [ ] Integrate existing systems into the new portal\n- [ ] Develop user training materials for dealers\n- [ ] Launch a pilot program with select dealers\n",
+      "matrix": {
+        "impact_normalized": 80,
+        "effort_normalized": 70,
+        "quadrant": "Big Bets"
+      }
+    },
+    {
+      "id": "PRJ-007",
+      "title": "Proactive Component Failure Risk Management",
+      "slug": "proactive-component-failure-risk-management",
+      "owner": "Plant Manager",
+      "department": "Manufacturing",
+      "phase": "Foundation",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2026-09-30"
+      },
+      "scores": {
+        "strategic_value": 8,
+        "complexity": 6,
+        "confidence": 1
+      },
+      "financials": {
+        "estimated_cost": 0,
+        "projected_roi": 0,
+        "currency": "USD"
+      },
+      "tags": [],
+      "related_projects": [],
+      "body": "\n# Executive Summary\nUnexpected stoppages during paint-line changeovers are causing significant delays. By implementing a proactive risk management system for component failures, we can minimize downtime and improve overall throughput, which is essential for meeting production targets.\n\n## Deliverables\n- [ ] Develop a predictive maintenance system for components\n- [ ] Train technicians on risk assessment protocols\n- [ ] Implement real-time monitoring tools\n- [ ] Establish a reporting framework for failure risks\n",
+      "matrix": {
+        "impact_normalized": 80,
+        "effort_normalized": 60,
+        "quadrant": "Big Bets"
+      }
+    },
+    {
+      "id": "PRJ-008",
+      "title": "Supply Chain Risk Management Framework",
+      "slug": "supply-chain-risk-management-framework",
+      "owner": "Supply Chain Lead",
+      "department": "Supply Chain",
+      "phase": "Foundation",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2026-09-30"
+      },
+      "scores": {
+        "strategic_value": 9,
+        "complexity": 7,
+        "confidence": 1
+      },
+      "financials": {
+        "estimated_cost": 0,
+        "projected_roi": 0,
+        "currency": "USD"
+      },
+      "tags": [],
+      "related_projects": [],
+      "body": "\n# Executive Summary\nWith single-source battery contracts posing a board-level risk, establishing a formal risk management framework is critical. This initiative will help mitigate supply chain disruptions and ensure continuity in production, which is vital for meeting customer demand.\n\n## Deliverables\n- [ ] Identify and evaluate backup suppliers\n- [ ] Develop formal risk triggers for supply chain events\n- [ ] Create a risk management communication plan\n- [ ] Establish regular review checkpoints for risk status\n",
+      "matrix": {
+        "impact_normalized": 90,
+        "effort_normalized": 70,
+        "quadrant": "Big Bets"
+      }
+    },
+    {
+      "id": "PRJ-009",
+      "title": "Warranty Claims Workflow Improvement",
+      "slug": "warranty-claims-workflow-improvement",
+      "owner": "After-Sales Support Lead",
+      "department": "After-Sales",
+      "phase": "Foundation",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2026-09-30"
+      },
+      "scores": {
+        "strategic_value": 8,
+        "complexity": 6,
+        "confidence": 1
+      },
+      "financials": {
+        "estimated_cost": 0,
+        "projected_roi": 0,
+        "currency": "USD"
+      },
+      "tags": [],
+      "related_projects": [],
+      "body": "\n# Executive Summary\nThe current manual processes for warranty claim handoffs between dealers and central support lead to customer frustration and inefficiencies. By modernizing the claims workflow, we can enhance transparency, reduce rework, and improve customer satisfaction, which is critical for maintaining trust and loyalty.\n\n## Deliverables\n- [ ] Develop a digital claims management system\n- [ ] Implement consistent triage rules for escalations\n- [ ] Train staff on new workflow processes\n- [ ] Establish clear ownership protocols for claims\n",
+      "matrix": {
+        "impact_normalized": 80,
+        "effort_normalized": 60,
+        "quadrant": "Big Bets"
+      }
+    },
+    {
+      "id": "PRJ-010",
+      "title": "Weekend Staffing and Alert Optimization",
+      "slug": "weekend-staffing-and-alert-optimization",
+      "owner": "Plant Manager",
+      "department": "Manufacturing",
+      "phase": "Foundation",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2026-09-30"
+      },
+      "scores": {
+        "strategic_value": 7,
+        "complexity": 5,
+        "confidence": 1
+      },
+      "financials": {
+        "estimated_cost": 0,
+        "projected_roi": 0,
+        "currency": "USD"
+      },
+      "tags": [],
+      "related_projects": [],
+      "body": "\n# Executive Summary\nThin staffing during weekend shifts leads to operational inefficiencies and delays. By optimizing alerts and prioritizing actionable information, we can ensure that technicians are better equipped to handle issues as they arise, thus improving overall productivity.\n\n## Deliverables\n- [ ] Develop a prioritized alert system for weekend shifts\n- [ ] Create a staffing plan that aligns with alert triggers\n- [ ] Train staff on new alert protocols\n- [ ] Monitor and adjust alert effectiveness post-implementation\n",
+      "matrix": {
+        "impact_normalized": 70,
+        "effort_normalized": 50,
+        "quadrant": "Big Bets"
       }
     }
   ],

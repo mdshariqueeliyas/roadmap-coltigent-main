@@ -51,6 +51,20 @@ function loadProjects(config) {
     const content = fs.readFileSync(fullPath, 'utf-8');
     const { data: frontmatter, content: body } = matter(content);
 
+    // Normalize date fields to YYYY-MM-DD (gray-matter may parse ISO as Date, or we get ISO strings)
+    if (frontmatter.dates) {
+      const d = frontmatter.dates;
+      const toDateStr = (v) => {
+        if (v == null) return v;
+        if (typeof v === 'string') return v.length >= 10 ? v.slice(0, 10) : v;
+        if (v instanceof Date) return v.toISOString().slice(0, 10);
+        return v;
+      };
+      d.planned_start = toDateStr(d.planned_start);
+      d.planned_end = toDateStr(d.planned_end);
+      if (d.actual_start) d.actual_start = toDateStr(d.actual_start);
+    }
+
     const parsed = projectFrontmatterSchema.safeParse(frontmatter);
     if (!parsed.success) {
       console.error(`Validation failed for ${file}:`, parsed.error.flatten());
