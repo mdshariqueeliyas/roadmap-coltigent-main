@@ -30,7 +30,7 @@ export function VelocityChart({ data }: { data: MasterData }) {
   }, [data.projects]);
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="print-break-inside-avoid rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
       <h2 className="mb-4 font-heading text-lg font-semibold text-primary">Velocity</h2>
       <p className="mb-4 text-sm text-gray-600">Projects started and completed by month</p>
       <div className="h-48">

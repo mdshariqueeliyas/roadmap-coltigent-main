@@ -76,6 +76,9 @@ export function SearchModal({ open, onClose }: { open: boolean; onClose: () => v
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="search-dialog-title"
       className="fixed inset-0 z-50 flex items-start justify-center bg-black/40 pt-[15vh]"
       onClick={onClose}
     >
@@ -84,6 +87,7 @@ export function SearchModal({ open, onClose }: { open: boolean; onClose: () => v
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center border-b border-gray-200 px-4">
+          <span id="search-dialog-title" className="sr-only">Search projects</span>
           <input
             ref={inputRef}
             type="search"
@@ -91,19 +95,20 @@ export function SearchModal({ open, onClose }: { open: boolean; onClose: () => v
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Search projects..."
-            className="flex-1 py-3 text-base outline-none"
-            aria-label="Search"
+            className="flex-1 py-3 text-base outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-inset"
+            aria-label="Search projects"
+            autoComplete="off"
           />
-          <kbd className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-500">Esc</kbd>
+          <kbd className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-600" aria-hidden>Esc</kbd>
         </div>
-        <ul ref={listRef} className="max-h-80 overflow-auto py-2">
+        <ul ref={listRef} className="max-h-80 overflow-auto py-2" role="listbox" aria-label="Search results">
           {results.length === 0 ? (
-            <li className="px-4 py-6 text-center text-sm text-gray-500">
+            <li className="px-4 py-6 text-center text-sm text-gray-600" role="option" aria-selected="false">
               No projects found matching &quot;{query}&quot;. Try adjusting your filters.
             </li>
           ) : (
             results.map((p: Project, i: number) => (
-              <li key={p.id}>
+              <li key={p.id} role="option" aria-selected={i === selected}>
                 <button
                   type="button"
                   onClick={() => {
@@ -111,7 +116,7 @@ export function SearchModal({ open, onClose }: { open: boolean; onClose: () => v
                     onClose();
                   }}
                   onMouseEnter={() => setSelected(i)}
-                  className={`flex w-full flex-col gap-0.5 px-4 py-2 text-left ${
+                  className={`flex w-full flex-col gap-0.5 px-4 py-2 text-left focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-inset ${
                     i === selected ? 'bg-secondary/10' : 'hover:bg-gray-50'
                   }`}
                 >

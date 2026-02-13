@@ -66,17 +66,19 @@ export default function MatrixPage() {
       <p className="text-gray-600">
         Impact vs. Effort. Quadrants: Quick Wins (high impact, low effort), Big Bets (high impact, high effort), Fillers (low both), Time Sinks (low impact, high effort).
       </p>
-      <div className="flex gap-6">
-        <aside className="w-56 shrink-0 space-y-4 rounded-xl border border-gray-200 bg-white p-4">
+      <div className="flex flex-col gap-4 lg:flex-row lg:gap-6">
+        <aside className="print-break-inside-avoid w-full shrink-0 space-y-4 rounded-xl border border-gray-200 bg-white p-4 lg:w-56">
           <h2 className="font-heading text-sm font-semibold text-primary">Departments</h2>
-          <ul className="space-y-1">
+          <ul className="space-y-1" role="list">
             {departmentsList.map((d) => (
               <li key={d}>
-                <label className="flex cursor-pointer items-center gap-2 text-sm">
+                <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-700">
                   <input
                     type="checkbox"
                     checked={departments.length === 0 || departments.includes(d)}
                     onChange={() => toggleDepartment(d)}
+                    className="focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
+                    aria-label={`Filter by department: ${d}`}
                   />
                   {d}
                 </label>
@@ -84,14 +86,16 @@ export default function MatrixPage() {
             ))}
           </ul>
           <h2 className="font-heading text-sm font-semibold text-primary">Phases</h2>
-          <ul className="space-y-1">
+          <ul className="space-y-1" role="list">
             {phasesList.map((p) => (
               <li key={p}>
-                <label className="flex cursor-pointer items-center gap-2 text-sm">
+                <label className="flex cursor-pointer items-center gap-2 text-sm text-gray-700">
                   <input
                     type="checkbox"
                     checked={phases.length === 0 || phases.includes(p)}
                     onChange={() => togglePhase(p)}
+                    className="focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
+                    aria-label={`Filter by phase: ${p}`}
                   />
                   {p}
                 </label>
@@ -99,7 +103,7 @@ export default function MatrixPage() {
             ))}
           </ul>
         </aside>
-        <div className="min-w-0 flex-1 rounded-xl border border-gray-200 bg-white p-6">
+        <div className="min-w-0 flex-1 rounded-xl border border-gray-200 bg-white p-4 lg:p-6 print-break-inside-avoid">
           <StrategyMatrixChart projects={filteredProjects} />
         </div>
       </div>

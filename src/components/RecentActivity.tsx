@@ -7,7 +7,7 @@ export function RecentActivity({ data, className = '' }: { data: MasterData; cla
   const recent = data.updates.slice(0, 3);
 
   return (
-    <div className={`rounded-xl border border-gray-200 bg-white p-6 shadow-sm ${className}`}>
+    <div className={`print-break-inside-avoid rounded-xl border border-gray-200 bg-white p-6 shadow-sm ${className}`}>
       <h2 className="mb-4 font-heading text-lg font-semibold text-primary">Recent Activity</h2>
       {recent.length === 0 ? (
         <p className="text-sm text-gray-500">No updates posted yet. Check back next week.</p>

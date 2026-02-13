@@ -1,5 +1,9 @@
 # When new files are added to _content/interviews, run the AI Ingestion pipeline
 # and open a PR to merge generated _content/_staging drafts into the staging branch.
+#
+# If you see "GitHub Actions is not permitted to create or approve pull requests":
+# 1. Repo Settings → Actions → General → enable "Allow GitHub Actions to create and approve pull requests"
+# 2. Or add a Personal Access Token (repo scope) as secret GH_PAT; the workflow will use it for PR creation.
 
 name: AI Ingestion (Interviews → Staging)
 
@@ -58,7 +62,8 @@ jobs:
       - name: Create branch and PR to staging
         if: steps.staging.outputs.has_staging == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use GH_PAT if set (e.g. when org blocks GITHUB_TOKEN from creating PRs); otherwise GITHUB_TOKEN
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
         run: |
           BRANCH="ingestion/staging-$(date +%Y%m%d-%H%M%S)"
           git config user.name "github-actions[bot]"

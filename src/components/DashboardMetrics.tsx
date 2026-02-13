@@ -26,7 +26,7 @@ export function DashboardMetrics({ data }: { data: MasterData }) {
       {cards.map((c) => (
         <div
           key={c.label}
-          className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+          className="print-break-inside-avoid rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
         >
           <p className="text-sm font-medium text-gray-500">{c.label}</p>
           <p className="mt-1 text-2xl font-bold text-primary">{c.value}</p>

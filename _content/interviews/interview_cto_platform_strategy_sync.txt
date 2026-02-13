@@ -1,0 +1,6 @@
+Chief Technology Officer (CTO) – Platform Strategy Sync
+ 
+- Data pipelines between manufacturing and service systems are brittle.
+- Too many dashboards, not enough decision automation.
+- We need an API-first integration model for suppliers.
+- AI pilots should have explicit kill-or-scale criteria within 60 days.

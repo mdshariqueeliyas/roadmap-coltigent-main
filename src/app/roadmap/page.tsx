@@ -39,14 +39,15 @@ export default function RoadmapPage() {
           <select
             value={groupBy}
             onChange={(e) => setGroupBy(e.target.value as 'department' | 'status')}
-            className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm"
+            className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-700 focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
+            aria-label="Group roadmap by"
           >
             <option value="department">Department</option>
             <option value="status">Status</option>
           </select>
         </div>
       </div>
-      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white p-4">
+      <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white p-4 print-break-inside-avoid">
         <RoadmapGantt projects={projects} groupBy={groupBy} />
       </div>
     </div>

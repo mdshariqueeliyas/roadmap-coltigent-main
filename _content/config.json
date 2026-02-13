@@ -2,8 +2,8 @@
   "tenant_id": "auto_nova_motors",
   "meta": {
     "title": "AutoNova Strategic Roadmap",
-    "logo_url": "/assets/logo.svg",
-    "favicon_url": "/assets/favicon.ico"
+    "logo_url": "/assets/logo.jpeg",
+    "favicon_url": "/assets/favicon.jpeg"
   },
   "design_tokens": {
     "colors": {

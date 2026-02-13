@@ -1,11 +1,11 @@
 {
-  "builtAt": "2026-02-13T15:52:49.798Z",
+  "builtAt": "2026-02-13T16:41:14.973Z",
   "config": {
     "tenant_id": "auto_nova_motors",
     "meta": {
       "title": "AutoNova Strategic Roadmap",
-      "logo_url": "/assets/logo.svg",
-      "favicon_url": "/assets/favicon.ico"
+      "logo_url": "/assets/logo.jpeg",
+      "favicon_url": "/assets/favicon.jpeg"
     },
     "design_tokens": {
       "colors": {
@@ -384,6 +384,37 @@
       "matrix": {
         "impact_normalized": 70,
         "effort_normalized": 50,
+        "quadrant": "Big Bets"
+      }
+    },
+    {
+      "id": "PRJ-011",
+      "title": "API-First Integration Model for Suppliers",
+      "slug": "api-first-integration-model-for-suppliers",
+      "owner": "CTO",
+      "department": "Manufacturing",
+      "phase": "Foundation",
+      "status": "Backlog",
+      "dates": {
+        "planned_start": "2026-04-01",
+        "planned_end": "2026-09-30"
+      },
+      "scores": {
+        "strategic_value": 9,
+        "complexity": 7,
+        "confidence": 1
+      },
+      "financials": {
+        "estimated_cost": 0,
+        "projected_roi": 0,
+        "currency": "USD"
+      },
+      "tags": [],
+      "related_projects": [],
+      "body": "\n# Executive Summary\nImplementing an API-first integration model will streamline data exchange between manufacturing and service systems, reducing brittleness in data pipelines. This is crucial for improving operational efficiency and ensuring timely access to critical information.\n\n## Deliverables\n- [ ] Design API specifications for key supplier data\n- [ ] Develop integration protocols with existing systems\n- [ ] Pilot the API with select suppliers\n",
+      "matrix": {
+        "impact_normalized": 90,
+        "effort_normalized": 70,
         "quadrant": "Big Bets"
       }
     }

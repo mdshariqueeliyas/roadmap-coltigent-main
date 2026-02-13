@@ -12,7 +12,7 @@ export function PhaseIndicator({ data }: { data: MasterData }) {
   const maxCount = Math.max(1, ...activeByPhase.map((x) => x.count));
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="print-break-inside-avoid rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
       <h2 className="mb-4 font-heading text-lg font-semibold text-primary">Strategic Phase</h2>
       <p className="mb-4 text-sm text-gray-600">
         Currently in Phase 1: <strong>{phases[0]}</strong>. Projects by phase.
